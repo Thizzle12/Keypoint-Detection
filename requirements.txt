@@ -1,1 +1,16 @@
---index-url https://download.pytorch.org/whl/cu118
+albumentations==1.4.3
+-e git+https://github.com/Thizzle12/Keypoint-Detection.git@89d63b817aa6a290b0b1d84240dab6ba67d5a7dd#egg=keypoint_detection
+matplotlib==3.8.4
+matplotlib-inline @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-inline_1660814786464/work
+numpy==1.26.4
+opencv-python-headless==4.9.0.80
+pandas==2.2.2
+pillow==10.3.0
+scikit-image==0.23.1
+scikit-learn==1.4.2
+scipy==1.13.0
+setuptools==69.2.0
+torch==2.2.2+cu118
+torchaudio==2.2.2+cu118
+torchvision==0.17.2+cu118
+tqdm==4.66.2
