@@ -21,7 +21,7 @@ def train():
     print("Training model...")
     print("Loading hyperparameters...")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    EPOCHS = 100
+    EPOCHS = 50
     BATCH_SIZE = 32
     LEARNING_RATE = 1e-4
     WEIGHT_DECAY = 0.0001
@@ -59,9 +59,9 @@ def train():
     # model = EfficientNet(num_classes=NUM_CLASSES, input_channels=CHANNELS).to(device)
     model = ResNet(num_classes=NUM_CLASSES, input_channels=CHANNELS).to(device)
 
-    # criterion = nn.SmoothL1Loss()
+    criterion = nn.SmoothL1Loss()
 
-    criterion = nn.MSELoss(reduction="sum")
+    # criterion = nn.MSELoss(reduction="sum")
     optimizer = AdamW(model.parameters(), lr=LEARNING_RATE, weight_decay=WEIGHT_DECAY)
 
     val_loss = np.inf
